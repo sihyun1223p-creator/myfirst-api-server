@@ -3,7 +3,7 @@
 이 문서는 `kustomize/` 디렉토리에서 시작하는 실습 가이드입니다. 공통 Kubernetes 설정을 작성하고, dev/prod 환경의 차이를 적용한 다음, 최종 YAML을 생성하고 배포합니다.
 
 ## 1. Kustomize란?
-
+....
 Kubernetes는 Deployment, Service, ConfigMap 같은 리소스를 YAML로 정의합니다. 환경마다 파일 전체를 복사하면 포트나 헬스체크를 변경할 때 여러 파일을 함께 수정해야 합니다.
 
 Kustomize는 공통 YAML을 재사용하고 환경별 변경 사항을 조합하는 도구입니다. 이 샘플에서는 공통 Deployment의 Pod 수를 1로 정의하고 dev에서는 2, prod에서는 3으로 변경합니다. `kubectl`에 포함된 Kustomize를 사용하므로 별도 Kustomize CLI 없이 실습할 수 있습니다.
